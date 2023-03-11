@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout active="1" order="1">lvl_1</layout>
+        <layout order="3">lvl_2</layout>
+        <layout order="5">death_menu</layout>
+        <event-sheet order="0">es_menu</event-sheet>
+        <event-sheet order="2">es_lvl_1</event-sheet>
+        <event-sheet order="4">es_main</event-sheet>
+        <event-sheet order="6">es_death_menu</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/menu_bg/" />
+        <folder expanded="1" path="animation-folder/play_btn/" />
+        <folder expanded="1" path="animation-folder/player/" />
+        <folder expanded="1" path="animation-folder/weapon/" />
+        <folder expanded="1" path="animation-folder/grass/" />
+        <folder expanded="1" path="animation-folder/crate_long/" />
+        <folder expanded="1" path="animation-folder/crate/" />
+        <folder expanded="1" path="animation-folder/bg/" />
+        <folder expanded="1" path="animation-folder/kill_Zone/" />
+        <folder expanded="1" path="animation-folder/bullet/" />
+        <folder expanded="1" path="animation-folder/heart/" />
+        <folder expanded="1" path="animation-folder/car/" />
+        <folder expanded="1" path="animation-folder/black/" />
+        <folder expanded="1" path="animation-folder/crosshair/" />
+        <folder expanded="1" path="animation-folder/game_over/" />
+    </folders-expanded>
+</c2uistate>

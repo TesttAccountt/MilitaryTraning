@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>es_lvl_1</name>
+    <events>
+        <variable constant="0" name="AimingAngle" sid="162813567959976" static="0" type="number">0</variable>
+        <event-block sid="286548678942006">
+            <conditions>
+                <condition id="2" name="Key is down" sid="115872328116366" type="Keyboard">
+                    <param id="0" name="Key">68</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="719499801824553" type="player">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="270738859171709" type="player">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="918310358753237">
+            <conditions>
+                <condition id="2" name="Key is down" sid="466219391582384" type="Keyboard">
+                    <param id="0" name="Key">65</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="775331963161218" type="player">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="641995793631221" type="player">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="151935435606375">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="210395534813008" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="583315718172429" type="player">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="0" name="Play" sid="853188210152306" type="Audio">
+                    <param id="0" name="Audio file">player_Jump</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="117413693180355">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="544594334667726" type="Keyboard">
+                    <param id="0" name="Key">87</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="296557603946470" type="player">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="859582453817595">
+            <conditions>
+                <condition behavior="Platform" id="8" name="On moved" sid="166601048880203" type="player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="843334378319363" type="player">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="449850211695118" type="player">
+                    <param id="0" name="Speed">15</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="216639741447036">
+            <conditions>
+                <condition behavior="Platform" id="7" name="On stopped" sid="812389803420092" type="player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="367638255593078" type="player">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="431917915043624" type="player">
+                    <param id="0" name="Speed">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="205343978394050">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="590415449725132" type="player">
+                    <param id="0" name="Object">weapon</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="985851935813744" type="player">
+                    <param id="0" name="Instance variable">haveWeapon</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="986633821147373" type="Audio">
+                    <param id="0" name="Audio file">weapon_Pickup</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="136510284474557">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="317333158852819" type="player">
+                    <param id="0" name="Instance variable">haveWeapon</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="449216478738713" type="System">
+                    <param id="0" name="Group name">&quot;weaponSystem&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="478374958987094">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="408747629513625" type="player">
+                    <param id="0" name="Instance variable">haveWeapon</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="232679439147300" type="System">
+                    <param id="0" name="Group name">&quot;weaponSystem&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="338712241657765" title="weaponSystem">
+            <sub-events>
+                <event-block sid="609767584432692">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="419757371012002" type="player">
+                            <param id="0" name="Instance variable">haveWeapon</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="323699958904539">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="980772097709996" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set angle toward position" sid="769836357158693" type="weapon">
+                                    <param id="0" name="X">Mouse.X</param>
+                                    <param id="1" name="Y">Mouse.Y</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="156276479073396" type="weapon">
+                                    <param id="0" name="Object">player</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="1" name="Set cursor from sprite" sid="497398970769435" type="Mouse">
+                                    <param id="0" name="Sprite">crosshair</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="142267090864754">
+                            <conditions>
+                                <condition id="1" name="On any click" sid="267407939227695" type="Mouse" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="588582601690894" type="weapon">
+                                    <param id="0" name="Object">bullet</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="164525765303392" type="Audio">
+                                    <param id="0" name="Audio file">bullet_destroy</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="755166725994972">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="636067450898826" type="Keyboard">
+                                    <param id="0" name="Key">68</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set angle toward position" sid="860463959134438" type="weapon">
+                                    <param id="0" name="X">Mouse.X</param>
+                                    <param id="1" name="Y">Mouse.Y</param>
+                                </action>
+                                <action id="8" name="Set flipped" sid="115610525365989" type="weapon">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="850683133413159">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="249722515001330" type="Keyboard">
+                                    <param id="0" name="Key">65</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set angle toward position" sid="419032707519672" type="weapon">
+                                    <param id="0" name="X">Mouse.X</param>
+                                    <param id="1" name="Y">Mouse.Y</param>
+                                </action>
+                                <action id="8" name="Set flipped" sid="952025691280849" type="weapon">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="519582234698769" title="music">
+            <sub-events>
+                <event-block sid="657075305209852">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="225062390036494" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="575260053362820" type="Audio">
+                            <param id="0" name="Audio file">looperman-l-4984670-0324695-guitar-chill-emin-120-xxx</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="202238896806214" title="crateHit">
+            <sub-events>
+                <event-block sid="222635949231169">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="447814348208553" type="bullet">
+                            <param id="0" name="Object">crate</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="275137107468518" type="Audio">
+                            <param id="0" name="Audio file">bullet_hit</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="691761826494415" type="crate">
+                            <param id="0" name="Object">wood_particle</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="439520995982013" type="wood_particle">
+                            <param id="0" name="Angle">-90</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="811220115716124" type="crate" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="478367671135095" title="carCutscene" />
+        <event-block sid="268882554509090">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="252397920189232" type="player">
+                    <param id="0" name="Object">car</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="398697484376726" type="player" />
+                <action id="-9" name="Destroy" sid="453566838539437" type="weapon" />
+                <action id="0" name="Set cursor style" sid="903732813155923" type="Mouse">
+                    <param id="0" name="Cursor style">7</param>
+                </action>
+                <action id="0" name="Play" sid="421930841515740" type="Audio">
+                    <param id="0" name="Audio file">car_start</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;car_start&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="313933542981155" type="System">
+                    <param id="0" name="Seconds">3.5</param>
+                </action>
+                <action id="-12" name="Set group active" sid="493188627757680" type="System">
+                    <param id="0" name="Group name">&quot;carMovement&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="534684022194105" type="System">
+                    <param id="0" name="Object to create">dirt_particle</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">194</param>
+                    <param id="3" name="Y">66</param>
+                </action>
+                <action id="6" name="Stop" sid="115852100540895" type="Audio">
+                    <param id="0" name="Tag">&quot;car_start&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" inactive="1" sid="643812111897745" title="carMovement">
+            <sub-events>
+                <event-block sid="723615641887017">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="464179331968367" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="717630206540486" type="car">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="410964789488199" title="deathSystem">
+            <sub-events>
+                <event-block sid="695241013158090">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="797816281504544" type="player">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="470488339497211" type="System">
+                            <param id="0" name="Object to create">blood_particles</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">player.X</param>
+                            <param id="3" name="Y">player.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="744508611203449" type="player" />
+                        <action id="5" name="Set frame" sid="176373612316016" type="heart">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="792252120549317" type="black">
+                            <param id="0" name="X">127</param>
+                            <param id="1" name="Y">36</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="465970850787052" type="heart">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="641340129391123" type="System">
+                            <param id="0" name="Object to create">game_over</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">62</param>
+                            <param id="3" name="Y">22</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-group description="" sid="296677315805429" title="restartSystem" />
+                    </sub-events>
+                </event-block>
+                <event-group description="" sid="164480779688016" title="mineSystem">
+                    <sub-events>
+                        <event-block sid="431080205934594">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="941968198915533" type="player">
+                                    <param id="0" name="Object">kill_Zone</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="487958144160440" type="System">
+                                    <param id="0" name="Object to create">mine_particle</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">kill_Zone.X</param>
+                                    <param id="3" name="Y">kill_Zone.Y</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="208968352360669" type="kill_Zone" />
+                                <action id="-10" name="Set value" sid="614848619604190" type="player">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="624915734977447" type="weapon" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
